@@ -1,0 +1,116 @@
+[gd_scene load_steps=6 format=3 uid="uid://ivxtn8mk01yj"]
+
+[ext_resource type="Texture2D" uid="uid://c7j4tf0ppiy6t" path="res://1758153737829.png" id="1_s483x"]
+
+[sub_resource type="Animation" id="Animation_x5jaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bubble/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="Animation" id="Animation_c4ygw"]
+resource_name = "poping up"
+length = 5.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 4.8027506, 5.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1000), Vector2(0, -1000), Vector2(0, -1000), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bubble/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.55, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.15, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.5500154, 2.6, 2.65, 3.56, 3.7105424, 4.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["", "", "ا", "ال", "الز", "الزر", "الزر م", "الزر مع", "الزر معل", "الزر معلق", "الزر معلق", "ح", "حد", "حد ب", "حد بي", "حد بيت", "حد بيتح", "حد بيتحكم", " حد بيتحكم فيه", " حد بيتحكم في", " حد بيتحكم فيه", " حد بيتحكم فيه", "لازم تبقي سريع", "لازم تبقي سريع"]
+}
+
+[sub_resource type="Animation" id="Animation_s483x"]
+resource_name = "text2"
+length = 5.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bdw6r"]
+_data = {
+&"RESET": SubResource("Animation_x5jaa"),
+&"poping up": SubResource("Animation_c4ygw"),
+&"text2": SubResource("Animation_s483x")
+}
+
+[node name="buble chat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -647.9982
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bubble" type="Sprite2D" parent="."]
+texture = ExtResource("1_s483x")
+
+[node name="text" type="Label" parent="bubble"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -663.0
+offset_top = -377.5
+offset_right = -79.0
+offset_bottom = -81.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bdw6r")
+}

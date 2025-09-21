@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv204hytlemsn"]
+
+[ext_resource type="Texture2D" uid="uid://b6tgcgdr7n5xe" path="res://photos/cpu_pixel-removebg-preview.png" id="1_ucvil"]
+
+[node name="ComputerPart" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(236, 227)
+texture = ExtResource("1_ucvil")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
