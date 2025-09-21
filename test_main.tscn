@@ -1,0 +1,247 @@
+[gd_scene load_steps=21 format=3 uid="uid://0aely2juwkns"]
+
+[ext_resource type="Texture2D" uid="uid://d2rdq3i5i8l6p" path="res://black_to_normal_indigo_pixel_background (1).webp" id="1_saih3"]
+[ext_resource type="FontFile" uid="uid://bi11k82rso0ob" path="res://PixelAE-Bold.ttf" id="2_aueqv"]
+[ext_resource type="Texture2D" uid="uid://d085e3oabxsre" path="res://FreeButtons.png/FreeButtons.png" id="3_xbli7"]
+[ext_resource type="Texture2D" uid="uid://cm7trcn5phfa7" path="res://066028346a0740bee921342149d76500.jpg" id="5_saih3"]
+[ext_resource type="Script" uid="uid://o0crdqnurwu1" path="res://button.gd" id="6_saih3"]
+[ext_resource type="Texture2D" uid="uid://c7j4tf0ppiy6t" path="res://1758153737829.png" id="6_soafa"]
+[ext_resource type="Texture2D" uid="uid://0a1hufywhd3q" path="res://1bb249a0-9176-4163-936f-1c228bd11c09-removebg-preview.png" id="7_soafa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aueqv"]
+font = ExtResource("2_aueqv")
+font_size = 90
+font_color = Color(0, 0, 0, 1)
+shadow_size = 12
+shadow_color = Color(0.339494, 0.344031, 0.356491, 1)
+
+[sub_resource type="Animation" id="Animation_x5jaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bubble/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="Animation" id="Animation_c4ygw"]
+resource_name = "poping up"
+length = 5.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 4.80275, 5.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1000), Vector2(0, -1000), Vector2(0, -1000), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bubble/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.55, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.15, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.55002, 2.6, 2.65, 3.56, 3.71054, 4.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["", "", "ا", "ال", "الز", "الزر", "الزر م", "الزر مع", "الزر معل", "الزر معلق", "الزر معلق", "ح", "حد", "حد ب", "حد بي", "حد بيت", "حد بيتح", "حد بيتحكم", " حد بيتحكم فيه", " حد بيتحكم في", " حد بيتحكم فيه", " حد بيتحكم فيه", "لازم تبقي سريع", "لازم تبقي سريع"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bdw6r"]
+_data = {
+&"RESET": SubResource("Animation_x5jaa"),
+&"poping up": SubResource("Animation_c4ygw")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_saih3"]
+font = ExtResource("2_aueqv")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+outline_color = Color(0.412152, 0.412152, 0.412152, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_soafa"]
+font = ExtResource("2_aueqv")
+font_size = 75
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0.169245, 0.169245, 0.169245, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c60bn"]
+font = ExtResource("2_aueqv")
+font_size = 41
+outline_size = 25
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_soafa"]
+texture = ExtResource("3_xbli7")
+region_rect = Rect2(32.9934, 1.06569, 14.0604, 13.916)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_saih3"]
+texture = ExtResource("3_xbli7")
+region_rect = Rect2(48.8521, 1.90465, 14.2692, 13.2017)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aueqv"]
+texture = ExtResource("3_xbli7")
+region_rect = Rect2(0.725353, 1.04213, 14.1487, 14.1627)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c60bn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_soafa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aueqv"]
+size = Vector2(162, 101)
+
+[node name="start" type="Node2D"]
+scale = Vector2(0.975585, 0.973032)
+
+[node name="MainMenuBackgroundPixelNoText" type="Sprite2D" parent="."]
+position = Vector2(594, 346)
+scale = Vector2(1.02895, 0.898419)
+texture = ExtResource("1_saih3")
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 562.0
+offset_top = 1067.0
+offset_right = 602.0
+offset_bottom = 1107.0
+scale = Vector2(0.607, 0.607)
+
+[node name="buble chat" type="Control" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bubble" type="Sprite2D" parent="Control2/buble chat"]
+position = Vector2(59.3081, -26.3591)
+scale = Vector2(1, 1.39539)
+texture = ExtResource("6_soafa")
+
+[node name="text" type="Label" parent="Control2/buble chat/bubble"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -724.893
+offset_top = -321.409
+offset_right = -85.8929
+offset_bottom = -25.4088
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+label_settings = SubResource("LabelSettings_aueqv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control2/buble chat"]
+libraries = {
+&"": SubResource("AnimationLibrary_bdw6r")
+}
+
+[node name="Label" type="Label" parent="Control2/buble chat"]
+layout_mode = 0
+offset_left = 120.264
+offset_top = -260.297
+offset_right = 522.264
+offset_bottom = -86.2964
+text = "النظام *"
+label_settings = SubResource("LabelSettings_saih3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 244.981
+offset_top = 55.4966
+offset_right = 739.981
+offset_bottom = 168.497
+scale = Vector2(1.41412, 1.09971)
+text = "THE BUTTON !"
+label_settings = SubResource("LabelSettings_soafa")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 773.0
+offset_top = 512.0
+offset_right = 1133.0
+offset_bottom = 578.0
+rotation = 0.137952
+text = "100% NO MUSIC !!!!"
+label_settings = SubResource("LabelSettings_c60bn")
+
+[node name="1Bb249a0-9176-4163-936f-1c228Bd11c09-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(1016, 463)
+rotation = -0.323682
+texture = ExtResource("7_soafa")
+
+[node name="066028346a0740Bee921342149d76500" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(142, 542)
+rotation = -0.111709
+scale = Vector2(0.357699, 0.273129)
+texture = ExtResource("5_saih3")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -50.0
+offset_top = 83.0
+offset_right = -10.0
+offset_bottom = 123.0
+
+[node name="Button" type="Button" parent="Control" groups=["click"]]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 196.0
+offset_right = 674.0
+offset_bottom = 295.0
+scale = Vector2(1.5097, 1.3433)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("2_aueqv")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_soafa")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_saih3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_aueqv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_c60bn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_soafa")
+text = "START"
+script = ExtResource("6_saih3")
+
+[node name="Area2D" type="Area2D" parent="Control/Button" groups=["click"]]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Button/Area2D" groups=["click"]]
+position = Vector2(78, 50.5)
+shape = SubResource("RectangleShape2D_aueqv")
+
+[connection signal="animation_finished" from="Control2/buble chat/AnimationPlayer" to="Control/Button" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
