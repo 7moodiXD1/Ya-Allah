@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://bc82l4uk73omf"]
+
+[ext_resource type="Texture2D" uid="uid://c8ovyhji6rjg8" path="res://—Pngtree—pixel art wooden board game_21298256.png" id="1_62e2m"]
+[ext_resource type="Texture2D" uid="uid://dkwbdj0jagj2m" path="res://Picsart_25-09-18_06-57-05-208.png" id="2_qtu10"]
+
+[sub_resource type="Animation" id="Animation_kbped"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ee4bf"]
+resource_name = "down"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1000), Vector2(0, 1000)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fj5cn"]
+_data = {
+&"RESET": SubResource("Animation_kbped"),
+&"down": SubResource("Animation_ee4bf")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.0014648438
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="board" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_62e2m")
+
+[node name="hand1" type="Sprite2D" parent="."]
+position = Vector2(216.00003, -253.00003)
+rotation = 3.4906585
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("2_qtu10")
+
+[node name="hand2" type="Sprite2D" parent="."]
+position = Vector2(-237, -256)
+rotation = 2.7925267
+scale = Vector2(-2.3, 2.3)
+texture = ExtResource("2_qtu10")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fj5cn")
+}

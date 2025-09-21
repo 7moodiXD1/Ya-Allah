@@ -1,0 +1,117 @@
+[gd_scene load_steps=13 format=3 uid="uid://b5003tut8eyl6"]
+
+[ext_resource type="Texture2D" uid="uid://ca30y40xl07dy" path="res://aS3N7q9dTdrE9LPc0YkDIm_1758265287087_na1fn_L2hvbWUvdWJ1bnR1L3ZpbnRhZ2VfYXJjYWRlX3Jvb20.webp" id="1_qawmq"]
+[ext_resource type="Script" uid="uid://wtl0ha23e6d0" path="res://picktoo.gd" id="1_y53te"]
+[ext_resource type="FontFile" uid="uid://bi11k82rso0ob" path="res://PixelAE-Bold.ttf" id="2_1tt1i"]
+[ext_resource type="Texture2D" uid="uid://sk0s36nbdu8c" path="res://1_vCN9ub8Af3Izt0QPtfPlAM_1758265642789_na1fn_L2hvbWUvdWJ1bnR1L3JpZ2h0X2Fycm93-removebg-preview.png" id="4_m0yow"]
+[ext_resource type="Texture2D" uid="uid://c86px483egect" path="res://9_wgYeVvWnqXG97kHBczlWqO_1758265867960_na1fn_L2hvbWUvdWJ1bnR1L3JhbnNvbXdhcmVfaWNvbg-removebg-preview.png" id="5_m0yow"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y53te"]
+font = ExtResource("2_1tt1i")
+font_size = 75
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e1n67"]
+font = ExtResource("2_1tt1i")
+font_size = 75
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irj1h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_li0hu"]
+texture = ExtResource("4_m0yow")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bg3as"]
+texture = ExtResource("4_m0yow")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxijs"]
+texture = ExtResource("4_m0yow")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1n67"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_y53te")
+
+[node name="9ijezdBjsoqXiZuToLjsh31758265288681Na1FnL2HvbWUvdWj1BnR1l2VsZwn0Cm9UaWNzX3DvcmtzaG9w" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+scale = Vector2(1.1498, 0.636719)
+texture = ExtResource("1_qawmq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="text" type="Label" parent="Control"]
+offset_left = 294.0
+offset_top = 3.0
+offset_right = 881.0
+offset_bottom = 116.0
+text = "find the parts !!"
+label_settings = SubResource("LabelSettings_y53te")
+
+[node name="info" type="Label" parent="Control"]
+offset_left = 287.0
+offset_top = 86.0
+offset_right = 1838.0
+offset_bottom = 205.0
+scale = Vector2(0.372908, 0.443038)
+text = "اعثر عل القطع في الصور واحذر من الفايروسات*"
+label_settings = SubResource("LabelSettings_y53te")
+
+[node name="text2" type="Label" parent="Control"]
+offset_left = 6.0
+offset_top = 132.0
+offset_right = 593.0
+offset_bottom = 245.0
+scale = Vector2(0.801656, 0.83063)
+text = "level 2"
+label_settings = SubResource("LabelSettings_e1n67")
+
+[node name="text3" type="Label" parent="Control"]
+offset_left = 426.0
+offset_top = 574.0
+offset_right = 1013.0
+offset_bottom = 687.0
+scale = Vector2(0.668266, 0.651272)
+text = "page 3/3"
+label_settings = SubResource("LabelSettings_e1n67")
+
+[node name="uhh" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 481.0
+offset_top = 550.0
+offset_right = 521.0
+offset_bottom = 590.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="uhh"]
+layout_mode = 0
+offset_top = 136.0
+offset_right = 8.0
+offset_bottom = 144.0
+rotation = 3.13216
+scale = Vector2(32.1613, 19.651)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_irj1h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_li0hu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bg3as")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bxijs")
+metadata/_edit_use_anchors_ = true
+
+[node name="virus !" type="Button" parent="."]
+offset_left = 992.0
+offset_top = 524.0
+offset_right = 1500.0
+offset_bottom = 1032.0
+scale = Vector2(0.138367, 0.160294)
+theme_override_icons/icon = ExtResource("5_m0yow")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e1n67")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="uhh/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="virus !" to="." method="_on_virus__pressed"]

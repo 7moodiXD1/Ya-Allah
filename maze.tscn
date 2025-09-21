@@ -1,0 +1,536 @@
+[gd_scene load_steps=41 format=3 uid="uid://c2rxpyohhr82e"]
+
+[ext_resource type="PackedScene" uid="uid://pxtlpwjbcmha" path="res://mazee.tscn" id="1_1nuxl"]
+[ext_resource type="Script" uid="uid://c6i3kdvlgaflw" path="res://maze.gd" id="1_eorol"]
+[ext_resource type="Texture2D" uid="uid://bfy8dynmo7fcg" path="res://1758330533931.png" id="3_ifb1s"]
+[ext_resource type="Texture2D" uid="uid://ckuv2fv84obet" path="res://1758330569804.png" id="4_a8wcq"]
+[ext_resource type="Texture2D" uid="uid://dkwbdj0jagj2m" path="res://Picsart_25-09-18_06-57-05-208.png" id="4_mjrf4"]
+[ext_resource type="Script" uid="uid://cp2wwl8sqpmd3" path="res://button3.gd" id="5_a8wcq"]
+[ext_resource type="Texture2D" uid="uid://bwqprlrwbshfa" path="res://1758456659214.png" id="5_eorol"]
+[ext_resource type="PackedScene" uid="uid://dn0tsxeu06vsx" path="res://area_2d.tscn" id="5_ugm30"]
+[ext_resource type="Script" uid="uid://b8mtxge1gxjnp" path="res://player_with_joystick.gd" id="5_xhimc"]
+[ext_resource type="Texture2D" uid="uid://bygifyyndh2ku" path="res://mouse.png" id="6_glv4d"]
+[ext_resource type="Script" uid="uid://7gbru7x18h03" path="res://door.gd" id="9_dnyu5"]
+[ext_resource type="FontFile" uid="uid://bi11k82rso0ob" path="res://PixelAE-Bold.ttf" id="9_xhimc"]
+[ext_resource type="Texture2D" uid="uid://tn4ck27ena2d" path="res://1758293266680.png" id="10_glv4d"]
+[ext_resource type="Script" uid="uid://b2nww1k0sjd12" path="res://press2.gd" id="11_cwyby"]
+[ext_resource type="Texture2D" uid="uid://fhq4iwbkln32" path="res://icon.svg" id="12_uywvj"]
+[ext_resource type="PackedScene" uid="uid://cs41c0lk076xu" path="res://trap_1.tscn" id="15_uywvj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nw8dj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnyu5"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifb1s"]
+size = Vector2(15, 337)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwyby"]
+size = Vector2(23, 354)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8wcq"]
+size = Vector2(93.5, 26.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uywvj"]
+size = Vector2(17, 123.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eorol"]
+size = Vector2(20.25, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6mec"]
+size = Vector2(22.5, 159.4375)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uywvj"]
+radius = 600.0
+
+[sub_resource type="Animation" id="Animation_eorol"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ifb1s")]
+}
+
+[sub_resource type="Animation" id="Animation_uywvj"]
+resource_name = "texture"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_ifb1s"), ExtResource("4_a8wcq")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k6mec"]
+_data = {
+&"RESET": SubResource("Animation_eorol"),
+&"texture": SubResource("Animation_uywvj")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfm34"]
+size = Vector2(137.01175, 55.020454)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dnyu5"]
+radius = 10.9313965
+height = 41.12622
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhimc"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhimc"]
+size = Vector2(39.999756, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnyu5"]
+size = Vector2(119.999695, 38)
+
+[sub_resource type="Animation" id="Animation_a8wcq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(851, 104)]
+}
+
+[sub_resource type="Animation" id="Animation_cwyby"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(851, 104), Vector2(851, 50)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uywvj"]
+_data = {
+&"RESET": SubResource("Animation_a8wcq"),
+&"new_animation": SubResource("Animation_cwyby")
+}
+
+[sub_resource type="Animation" id="Animation_ifb1s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(656, 633)]
+}
+
+[sub_resource type="Animation" id="Animation_dnyu5"]
+resource_name = "key_anim"
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(656, 631), Vector2(656, 630), Vector2(656, 631)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cwyby"]
+_data = {
+&"RESET": SubResource("Animation_ifb1s"),
+&"key_anim": SubResource("Animation_dnyu5")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a8wcq"]
+radius = 400.0
+
+[node name="Maze" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -42.0
+offset_right = -1168.0
+offset_bottom = -690.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eorol")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -192.0
+offset_top = -208.0
+offset_right = 1420.0
+offset_bottom = 956.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nw8dj")
+metadata/_edit_lock_ = true
+
+[node name="mazee" parent="." instance=ExtResource("1_1nuxl")]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 64.0
+offset_right = 5.0
+offset_bottom = 64.0
+metadata/_edit_lock_ = true
+
+[node name="Panel34" type="Panel" parent="mazee"]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = 543.24
+offset_right = 406.29117
+offset_bottom = 578.6982
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_dnyu5")
+
+[node name="Panel35" type="Panel" parent="mazee"]
+visible = false
+layout_mode = 0
+offset_left = 141.0
+offset_top = 507.0
+offset_right = 247.0
+offset_bottom = 542.4582
+theme_override_styles/panel = SubResource("StyleBoxFlat_dnyu5")
+
+[node name="Panel36" type="Panel" parent="mazee"]
+visible = false
+layout_mode = 0
+offset_left = 212.0
+offset_top = 507.0
+offset_right = 523.3059
+offset_bottom = 542.4582
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_dnyu5")
+
+[node name="Area2D" type="Area2D" parent="mazee" groups=["die"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mazee/Area2D"]
+position = Vector2(220, 365)
+shape = SubResource("RectangleShape2D_ifb1s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mazee/Area2D"]
+position = Vector2(257.5, 374)
+shape = SubResource("RectangleShape2D_cwyby")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="mazee/Area2D"]
+position = Vector2(180.75, 520.25)
+shape = SubResource("RectangleShape2D_a8wcq")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="mazee/Area2D"]
+position = Vector2(120.5, 480.75)
+shape = SubResource("RectangleShape2D_uywvj")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="mazee/Area2D"]
+position = Vector2(144.125, 476)
+shape = SubResource("RectangleShape2D_eorol")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="mazee/Area2D"]
+position = Vector2(108.25, 338.71875)
+shape = SubResource("RectangleShape2D_k6mec")
+
+[node name="Label" type="Label" parent="mazee"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 127.0
+offset_right = 805.0
+offset_bottom = 664.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_xhimc")
+theme_override_font_sizes/font_size = 30
+text = "you need to pull
+ the lever
+for this"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="mazee"]
+position = Vector2(72.00001, 28.000004)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("3_ifb1s")
+
+[node name="Area2D" type="Area2D" parent="mazee/Sprite2D" groups=["click"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mazee/Sprite2D/Area2D"]
+position = Vector2(-33.333332, 66.666534)
+shape = SubResource("CircleShape2D_uywvj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="mazee"]
+libraries = {
+&"": SubResource("AnimationLibrary_k6mec")
+}
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = -40.0
+offset_top = 60.0
+offset_bottom = 100.0
+
+[node name="Control" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 155.0
+offset_top = 214.0
+offset_right = 195.0
+offset_bottom = 254.0
+scale = Vector2(0.82, 0.82)
+
+[node name="Button" type="Sprite2D" parent="Control/Control" groups=["click"]]
+position = Vector2(3.658537, -31.707317)
+scale = Vector2(0.421, 0.366)
+texture = ExtResource("5_eorol")
+script = ExtResource("5_a8wcq")
+
+[node name="Area2D" type="Area2D" parent="Control/Control/Button"]
+position = Vector2(-261.32404, -110.86475)
+scale = Vector2(3.573, 3.573)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Control/Button/Area2D"]
+position = Vector2(71.11174, 84.6501)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_bfm34")
+
+[node name="hand1" type="Sprite2D" parent="Control/Control/Button"]
+visible = false
+position = Vector2(22, -30)
+scale = Vector2(1, -1)
+texture = ExtResource("4_mjrf4")
+
+[node name="hand2" type="Sprite2D" parent="Control/Control/Button"]
+visible = false
+position = Vector2(152, -30)
+rotation = -3.1415925
+texture = ExtResource("4_mjrf4")
+
+[node name="Timer" type="Timer" parent="Control/Control"]
+one_shot = true
+
+[node name="Timer" type="Timer" parent="Control"]
+one_shot = true
+
+[node name="Area2D" parent="." groups=["die"] instance=ExtResource("5_ugm30")]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 862.00006
+offset_top = 101.00001
+offset_right = 1367.0
+offset_bottom = 228.0
+scale = Vector2(0.278, 0.278)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_xhimc")
+theme_override_font_sizes/font_size = 21
+text = "needs a 
+key for this"
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+position = Vector2(97.12208, 43.16544)
+rotation = 0.5270894
+scale = Vector2(-0.05, 0.05)
+texture = ExtResource("10_glv4d")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(145, 94)
+scale = Vector2(0.5, 0.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D" groups=["player"]]
+scale = Vector2(0.69, 0.69)
+script = ExtResource("5_xhimc")
+max_speed = null
+acceleration = null
+friction = null
+slowdown_speed = null
+slowdown_duration_limit = null
+slowdown_cooldown_time = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D"]
+rotation = -0.47731543
+shape = SubResource("CapsuleShape2D_dnyu5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/CharacterBody2D"]
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("6_glv4d")
+
+[node name="Area2D" type="Area2D" parent="Node2D/CharacterBody2D" groups=["player"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/CharacterBody2D/Area2D" groups=["player"]]
+scale = Vector2(0.155, 0.155)
+polygon = PackedVector2Array(-74, -140, -74, -138.1, -77, -136.1, -77, 76.79999, -72.8, 81, -58.199997, 81, -54, 76.79999, -54, 69, -46.199997, 69, -42, 64.79999, -42, 56, -32.899994, 56, -30.899994, 53, -29, 53, -29, 44, -15, 44, -15, 64.79999, -10.800003, 69, -3, 69, -3, 88.79999, 2.199997, 94, 10, 94, 10, 113.79999, 14.199997, 118, 22, 118, 22, 126.79999, 26.199997, 131, 52.799988, 131, 57, 126.79999, 57, 118, 65.79999, 118, 70, 113.79999, 70, 87.20001, 65.79999, 83, 57, 83, 57, 62.200012, 52.799988, 58, 45, 58, 45, 37.899994, 42, 35.899994, 42, 34, 33, 34, 33, 19, 78.100006, 19, 80.100006, 16, 82, 16, 82, 0.19999695, 77.79999, -4, 70, -4, 70, -11.800003, 65.79999, -16, 57, -16, 57, -24.100006, 54, -26.100006, 54, -28, 45, -28, 45, -36.800003, 40.800003, -41, 33, -41, 33, -48.800003, 28.800003, -53, 20, -53, 20, -60.800003, 15.800003, -65, 8, -65, 8, -73.8, 3.800003, -78, -4, -78, -4, -85.8, -8.199997, -90, -17, -90, -17, -98.8, -21.199997, -103, -29, -103, -29, -110.8, -33.199997, -115, -42, -115, -42, -122.8, -46.199997, -127, -54, -127, -54, -136.1, -57, -138.1, -57, -140)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/CharacterBody2D"]
+zoom = Vector2(5, 5)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="Timer" type="Timer" parent="Node2D/CharacterBody2D"]
+wait_time = 3.0
+
+[node name="Timer2" type="Timer" parent="Node2D/CharacterBody2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node2D/CharacterBody2D"]
+
+[node name="cooldown_label" type="Label" parent="Node2D/CharacterBody2D/CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 477.0
+offset_top = -29.0
+offset_right = 965.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_color = Color(0.74482805, 0.09180684, 0, 1)
+theme_override_fonts/font = ExtResource("9_xhimc")
+theme_override_font_sizes/font_size = 106
+
+[node name="Node2D2" type="Node2D" parent="Node2D/CharacterBody2D/CanvasLayer"]
+visible = false
+position = Vector2(119, 403)
+scale = Vector2(0.503, 0.503)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Node2D/CharacterBody2D/CanvasLayer/Node2D2"]
+texture_normal = ExtResource("12_uywvj")
+action = "W"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Node2D/CharacterBody2D/CanvasLayer/Node2D2"]
+position = Vector2(-11, 141)
+texture_normal = ExtResource("12_uywvj")
+action = "S"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Node2D/CharacterBody2D/CanvasLayer/Node2D2"]
+position = Vector2(166, 92)
+texture_normal = ExtResource("12_uywvj")
+action = "D"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="Node2D/CharacterBody2D/CanvasLayer/Node2D2"]
+position = Vector2(-170, 91)
+texture_normal = ExtResource("12_uywvj")
+action = "A"
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="Node2D/CharacterBody2D/CanvasLayer/Node2D2"]
+position = Vector2(1803.1809, 101.39163)
+texture_normal = ExtResource("12_uywvj")
+action = "click"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="press" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(987.564, 454.772)
+scale = Vector2(0.652, 0.652)
+action = "click"
+script = ExtResource("11_cwyby")
+
+[node name="door" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 851.0
+offset_top = 104.0
+offset_right = 891.0
+offset_bottom = 144.00009
+scale = Vector2(0.15, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_xhimc")
+script = ExtResource("9_dnyu5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door/StaticBody2D"]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_xhimc")
+
+[node name="Area2D" type="Area2D" parent="door"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="door/Area2D"]
+position = Vector2(60, 19)
+shape = SubResource("RectangleShape2D_dnyu5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="door"]
+libraries = {
+&"": SubResource("AnimationLibrary_uywvj")
+}
+
+[node name="key" type="Sprite2D" parent="."]
+position = Vector2(656, 633)
+rotation = -0.27925268
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("10_glv4d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="key"]
+libraries = {
+&"": SubResource("AnimationLibrary_cwyby")
+}
+autoplay = "key_anim"
+
+[node name="Area2D" type="Area2D" parent="key" groups=["key"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key/Area2D"]
+shape = SubResource("CircleShape2D_a8wcq")
+
+[node name="trap1" parent="." instance=ExtResource("15_uywvj")]
+layout_mode = 1
+offset_left = 990.0
+offset_top = 361.0
+offset_right = 990.0
+offset_bottom = 361.0
+scale = Vector2(0.3, 0.3)
+
+[node name="trap2" parent="." instance=ExtResource("15_uywvj")]
+layout_mode = 1
+offset_left = 773.0
+offset_top = 631.00006
+offset_right = 773.0
+offset_bottom = 631.00006
+scale = Vector2(0.3, 0.3)
+
+[node name="trap3" parent="." instance=ExtResource("15_uywvj")]
+layout_mode = 1
+offset_left = 707.0
+offset_top = 628.0
+offset_right = 707.0
+offset_bottom = 628.0
+scale = Vector2(0.3, 0.3)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="area_entered" from="Control/Control/Button/Area2D" to="Control/Control/Button" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Control/Control/Timer" to="Control/Control/Button" method="_on_timer_timeout"]
+[connection signal="area_entered" from="Node2D/CharacterBody2D/Area2D" to="Node2D/CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Node2D/CharacterBody2D/Timer" to="Node2D/CharacterBody2D" method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/press" to="CanvasLayer/press" method="_on_pressed"]
+[connection signal="area_entered" from="door/Area2D" to="door" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="Control/Control/Button" method="_on_timer_timeout"]

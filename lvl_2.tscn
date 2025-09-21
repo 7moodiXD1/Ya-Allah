@@ -1,0 +1,372 @@
+[gd_scene load_steps=15 format=3 uid="uid://dc8xci4ienk1s"]
+
+[ext_resource type="Texture2D" uid="uid://d2rdq3i5i8l6p" path="res://black_to_normal_indigo_pixel_background (1).webp" id="1_7rxco"]
+[ext_resource type="Script" uid="uid://b8lq7em5odsbt" path="res://control_4.gd" id="1_lyj2s"]
+[ext_resource type="FontFile" uid="uid://bi11k82rso0ob" path="res://PixelAE-Bold.ttf" id="2_bmf8x"]
+[ext_resource type="Texture2D" uid="uid://dkwbdj0jagj2m" path="res://Picsart_25-09-18_06-57-05-208.png" id="2_rlmum"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlmum"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_urlp7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-284.632, -1000)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Only Fast People Who Can Press The button"]
+}
+
+[sub_resource type="Animation" id="Animation_dnxd7"]
+resource_name = "textt"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 4, 4.5, 5.4666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-284.632, -1000), Vector2(-284.632, -1000), Vector2(-284.632, -150), Vector2(-284.632, -150), Vector2(-284.632, -1000), Vector2(-284.632, -150)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 4.5, 4.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Only Fast People Who Can Press The button", "Only Fast People Who Can Press The button", "Only Fast People Who Can Press The button", "First
+You need A Small Train"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rno80"]
+_data = {
+&"RESET": SubResource("Animation_urlp7"),
+&"textt": SubResource("Animation_dnxd7")
+}
+
+[sub_resource type="Animation" id="Animation_kbped"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hand1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(216.00003, -253.00003)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hand2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-237, -256)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hand2:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_rlmum")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hand1:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_rlmum")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ee4bf"]
+resource_name = "down"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98, 1.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1000), Vector2(0, 1000)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hand1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.1333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(216.00003, -253.00003), Vector2(216.00003, -253.00003), Vector2(216, -1000)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hand2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2.1666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-237, -256), Vector2(-237, -256), Vector2(-237, -1000)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hand2:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_rlmum"), ExtResource("2_rlmum")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hand1:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_rlmum"), ExtResource("2_rlmum")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4, 6.5, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(3, 3), Vector2(3, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_lyj2s"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1000), Vector2(0, 1000)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fj5cn"]
+_data = {
+&"RESET": SubResource("Animation_kbped"),
+&"down": SubResource("Animation_ee4bf"),
+&"idle": SubResource("Animation_lyj2s")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rxco"]
+size = Vector2(104, 734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7f4c"]
+size = Vector2(104, 1174)
+
+[node name="lvl2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(561, 263)
+texture = ExtResource("1_7rxco")
+
+[node name="Control4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 600.0
+offset_top = -700.0
+offset_right = 640.0
+offset_bottom = -660.0
+script = ExtResource("1_lyj2s")
+
+[node name="Control3" type="Control" parent="Control4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.0017089844
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="Control" type="Control" parent="Control4/Control3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -10.0007305
+offset_right = -18.0
+offset_bottom = 29.99927
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control4/Control3/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -268.0
+offset_right = 502.0
+offset_bottom = 278.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rlmum")
+
+[node name="Label" type="Label" parent="Control4/Control3/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.632
+offset_top = -1020.0
+offset_right = 282.368
+offset_bottom = -726.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_bmf8x")
+theme_override_font_sizes/font_size = 64
+text = "Only Fast People Who Can Press The button"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control4/Control3/Control"]
+libraries = {
+&"": SubResource("AnimationLibrary_rno80")
+}
+
+[node name="hand1" type="Sprite2D" parent="Control4/Control3"]
+position = Vector2(216.00003, -253.00003)
+rotation = 3.4906585
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("2_rlmum")
+
+[node name="hand2" type="Sprite2D" parent="Control4/Control3"]
+position = Vector2(-237, -256)
+rotation = 2.7925267
+scale = Vector2(-2.3, 2.3)
+texture = ExtResource("2_rlmum")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control4/Control3"]
+libraries = {
+&"": SubResource("AnimationLibrary_fj5cn")
+}
+autoplay = "down"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(-48, 317)
+shape = SubResource("RectangleShape2D_7rxco")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(1203, 303)
+shape = SubResource("RectangleShape2D_7rxco")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(577, 694)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_f7f4c")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(591, -43)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_f7f4c")
+
+[connection signal="animation_finished" from="Control4/Control3/Control/AnimationPlayer" to="Control4" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Control4/Control3/AnimationPlayer2" to="Control4" method="_on_animation_player_2_animation_finished"]

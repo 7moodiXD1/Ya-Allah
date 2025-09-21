@@ -1,0 +1,431 @@
+[gd_scene load_steps=16 format=3 uid="uid://bhnx11j6rwau1"]
+
+[ext_resource type="Script" uid="uid://bfe65swuspda8" path="res://lvl_3.gd" id="1_dnxd7"]
+[ext_resource type="PackedScene" uid="uid://pxtlpwjbcmha" path="res://mazee.tscn" id="1_oj8a2"]
+[ext_resource type="Texture2D" uid="uid://doqi2driikor8" path="res://Picsart_25-09-18_06-56-20-118.png" id="2_oj8a2"]
+[ext_resource type="Texture2D" uid="uid://dkwbdj0jagj2m" path="res://Picsart_25-09-18_06-57-05-208.png" id="2_rlmum"]
+[ext_resource type="Texture2D" uid="uid://bwqprlrwbshfa" path="res://1758456659214.png" id="3_dnxd7"]
+[ext_resource type="Texture2D" uid="uid://c7j4tf0ppiy6t" path="res://1758153737829.png" id="6_rno80"]
+[ext_resource type="FontFile" uid="uid://bi11k82rso0ob" path="res://PixelAE-Bold.ttf" id="7_31vo8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnxd7"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_vbeg1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(544, 165)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hand1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(22, -332)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hand2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(152, -332)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hand1:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_oj8a2")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hand2:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_oj8a2")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("hand1:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("hand2:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Panel:theme_override_styles/panel:bg_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../../Panel:theme_override_styles/panel:bg_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rlmum"]
+resource_name = "start_button_down"
+length = 9.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6, 7, 7.2337484, 7.4337487, 7.6137486, 7.8037486, 9.431897),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0.977611, 0.977611, 0.977611, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(544, -500), Vector2(544, 20), Vector2(544, 20), Vector2(0, 20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hand1:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 2.0179174),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2.14, 2.14), Vector2(-2.14, 2.14), Vector2(2.14, 2.14)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hand2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 2.017),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2.14, 2.14), Vector2(2.14, 2.14), Vector2(-2.14, 2.14)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hand2:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2, 2.017),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_rlmum"), ExtResource("2_rlmum"), ExtResource("2_oj8a2")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("hand1:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2, 2.017),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_rlmum"), ExtResource("2_rlmum"), ExtResource("2_oj8a2")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("hand1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-175.80473, -348.81244), Vector2(-175.80473, -348.81244), Vector2(-175.805, -1000)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("hand2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(152, -350), Vector2(152, -350), Vector2(152, -1000)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../../Panel:theme_override_styles/panel:bg_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 7, 7.5, 8, 8.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_22vjt"]
+_data = {
+&"RESET": SubResource("Animation_vbeg1"),
+&"start_button_down": SubResource("Animation_rlmum")
+}
+
+[sub_resource type="Animation" id="Animation_x5jaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bubble/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="Animation" id="Animation_c4ygw"]
+resource_name = "poping up"
+length = 9.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1000), Vector2(0, -1000), Vector2(0, -1000), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bubble/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2, 3, 3.59, 5, 5.5, 6, 6.5, 7.05),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["", "Go ", "Go To ", "Go To The", "Board", "Board And", "Find ", "Find The", "Lost", "Lost PC's", "Parts"]
+}
+
+[sub_resource type="Animation" id="Animation_s483x"]
+resource_name = "text2"
+length = 5.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bdw6r"]
+_data = {
+&"RESET": SubResource("Animation_x5jaa"),
+&"poping up": SubResource("Animation_c4ygw"),
+&"text2": SubResource("Animation_s483x")
+}
+
+[node name="Lvl_3" type="Node2D"]
+script = ExtResource("1_dnxd7")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -43.0
+offset_right = -25.55
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(60, 40)
+theme_override_styles/panel = SubResource("StyleBoxFlat_dnxd7")
+metadata/_edit_lock_ = true
+
+[node name="mazee" parent="." instance=ExtResource("1_oj8a2")]
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -47.0
+offset_top = 69.0
+offset_right = -7.0
+offset_bottom = 109.0
+
+[node name="Control" type="Control" parent="Control2"]
+anchors_preset = 0
+offset_left = 155.0
+offset_top = 85.0
+offset_right = 195.0
+offset_bottom = 125.0
+scale = Vector2(0.735, 0.735)
+
+[node name="Button" type="Sprite2D" parent="Control2/Control" groups=["click"]]
+position = Vector2(544, 165)
+scale = Vector2(0.5, 0.458)
+texture = ExtResource("3_dnxd7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control2/Control/Button"]
+libraries = {
+&"": SubResource("AnimationLibrary_22vjt")
+}
+autoplay = "start_button_down"
+
+[node name="hand1" type="Sprite2D" parent="Control2/Control/Button"]
+position = Vector2(22, -332)
+rotation = -3.1415925
+texture = ExtResource("2_oj8a2")
+
+[node name="hand2" type="Sprite2D" parent="Control2/Control/Button"]
+position = Vector2(152, -332)
+rotation = 3.1415927
+scale = Vector2(-1, 1)
+texture = ExtResource("2_oj8a2")
+
+[node name="Timer" type="Timer" parent="Control2/Control"]
+one_shot = true
+
+[node name="Control3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 604.00006
+offset_top = 1123.0
+offset_right = 644.00006
+offset_bottom = 1163.0
+scale = Vector2(0.604, 0.604)
+
+[node name="buble chat" type="Control" parent="Control3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bubble" type="Sprite2D" parent="Control3/buble chat"]
+texture = ExtResource("6_rno80")
+
+[node name="text" type="Label" parent="Control3/buble chat/bubble"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -663.0
+offset_top = -377.5
+offset_right = -79.0
+offset_bottom = -81.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_31vo8")
+theme_override_font_sizes/font_size = 100
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control3/buble chat"]
+libraries = {
+&"": SubResource("AnimationLibrary_bdw6r")
+}
+
+[connection signal="animation_finished" from="Control2/Control/Button/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Control2/Control/Timer" to="Control2/Control/Button" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Control3/buble chat/AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]

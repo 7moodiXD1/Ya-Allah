@@ -1,0 +1,310 @@
+[gd_scene load_steps=2 format=3 uid="uid://pxtlpwjbcmha"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilwsp"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="mazee" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 889.0
+offset_top = 313.0
+offset_right = 922.75116
+offset_bottom = 583.0
+rotation = -1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 889.0
+offset_top = 313.0
+offset_right = 922.75116
+offset_bottom = 583.0
+rotation = -3.132866
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel5" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 77.0
+offset_right = 656.2865
+offset_bottom = 345.92877
+rotation = -1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel6" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 77.0
+offset_right = 655.75116
+offset_bottom = 347.0
+rotation = -6.2831855
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel7" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 731.6321
+offset_top = 313.0
+offset_right = 767.4879
+offset_bottom = 423.20142
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel8" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 731.56934
+offset_top = 313.0
+offset_right = 765.3205
+offset_bottom = 534.938
+rotation = 3.1415927
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel14" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 296.95947
+offset_right = 832.75116
+offset_bottom = 387.69232
+rotation = 3.1415927
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel15" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 296.95947
+offset_right = 832.75116
+offset_bottom = 332.41766
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel16" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 348.52356
+offset_right = 884.31525
+offset_bottom = 383.98175
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel17" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 800.5775
+offset_top = 320.2687
+offset_right = 908.43256
+offset_bottom = 355.7269
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel18" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 774.0
+offset_top = 428.0
+offset_right = 1041.1576
+offset_bottom = 463.4582
+rotation = 3.1415927
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel19" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 427.0
+offset_right = 774.1576
+offset_bottom = 462.4582
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel21" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 427.0
+offset_right = 720.1576
+offset_bottom = 462.4582
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel22" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 426.0
+offset_right = 667.1576
+offset_bottom = 461.4582
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel27" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 427.0
+offset_right = 694.57837
+offset_bottom = 462.4582
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel30" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 226.82004
+offset_top = 537.79254
+offset_right = 601.1909
+offset_bottom = 556.43066
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel31" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 534.0
+offset_right = 246.0
+offset_bottom = 544.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel32" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 534.0
+offset_right = 246.0
+offset_bottom = 538.98804
+rotation = -1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel33" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 120.40029
+offset_top = 419.0
+offset_right = 280.20563
+offset_bottom = 442.0198
+rotation = -1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel25" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 427.15942
+offset_right = 610.317
+offset_bottom = 462.6176
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel20" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 427.0
+offset_right = 435.63513
+offset_bottom = 482.55228
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel26" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 427.0
+offset_right = 322.63513
+offset_bottom = 482.55228
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel24" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 192.0
+offset_right = 378.63513
+offset_bottom = 247.55228
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel29" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 210.49799
+offset_top = 196.0
+offset_right = 243.13312
+offset_bottom = 270.0543
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel28" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 43.58022
+offset_top = 46.999996
+offset_right = 76.21535
+offset_bottom = 303.97205
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel23" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 192.0
+offset_right = 507.63513
+offset_bottom = 247.55228
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel10" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 800.00006
+offset_top = 173.06668
+offset_right = 833.7512
+offset_bottom = 255.07135
+rotation = 3.1415927
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel11" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 800.00006
+offset_top = 173.06668
+offset_right = 833.7512
+offset_bottom = 205.9357
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel12" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 800.00006
+offset_top = 216.12308
+offset_right = 876.8076
+offset_bottom = 248.9921
+rotation = 4.712389
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel13" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 800.00006
+offset_top = 216.12308
+offset_right = 844.49915
+offset_bottom = 248.9921
+rotation = 3.1415927
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel9" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 125.0
+offset_right = 734.75116
+offset_bottom = 209.62726
+rotation = -1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 889.0035
+offset_top = 311.01822
+offset_right = 922.75464
+offset_bottom = 583.0
+rotation = -6.28144
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")
+
+[node name="Panel4" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 901.0
+offset_top = 549.0
+offset_right = 934.75116
+offset_bottom = 819.0
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilwsp")

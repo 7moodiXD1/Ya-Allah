@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://bnihp6pmdihbg"]
+
+[ext_resource type="Texture2D" uid="uid://cap1pax7b2ieh" path="res://B8mO2W836FDGhVtibmMpX9_1758265284641_na1fn_L2hvbWUvdWJ1bnR1L3JvYm90aWNzX2xhYl9yb29t.webp" id="1_0wbr7"]
+[ext_resource type="Script" uid="uid://d3exajv8mro4o" path="res://pictoo.gd" id="1_6faxh"]
+[ext_resource type="FontFile" uid="uid://bi11k82rso0ob" path="res://PixelAE-Bold.ttf" id="2_46uyb"]
+[ext_resource type="Texture2D" uid="uid://sk0s36nbdu8c" path="res://1_vCN9ub8Af3Izt0QPtfPlAM_1758265642789_na1fn_L2hvbWUvdWJ1bnR1L3JpZ2h0X2Fycm93-removebg-preview.png" id="4_wefoc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6faxh"]
+font = ExtResource("2_46uyb")
+font_size = 75
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3b6g1"]
+font = ExtResource("2_46uyb")
+font_size = 75
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ciutj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_238qe"]
+texture = ExtResource("4_wefoc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2dnpe"]
+texture = ExtResource("4_wefoc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cos8x"]
+texture = ExtResource("4_wefoc")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6faxh")
+
+[node name="9ijezdBjsoqXiZuToLjsh31758265288681Na1FnL2HvbWUvdWj1BnR1l2VsZwn0Cm9UaWNzX3DvcmtzaG9w" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+scale = Vector2(1.15307, 0.67682)
+texture = ExtResource("1_0wbr7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="text" type="Label" parent="Control"]
+offset_left = 294.0
+offset_top = 3.0
+offset_right = 881.0
+offset_bottom = 116.0
+text = "find the parts !!"
+label_settings = SubResource("LabelSettings_6faxh")
+
+[node name="info" type="Label" parent="Control"]
+offset_left = 287.0
+offset_top = 86.0
+offset_right = 1838.0
+offset_bottom = 205.0
+scale = Vector2(0.372908, 0.443038)
+text = "اعثر عل القطع في الصور واحذر من الفايروسات*"
+label_settings = SubResource("LabelSettings_6faxh")
+
+[node name="text2" type="Label" parent="Control"]
+offset_left = 6.0
+offset_top = 132.0
+offset_right = 593.0
+offset_bottom = 245.0
+scale = Vector2(0.801656, 0.83063)
+text = "level 2"
+label_settings = SubResource("LabelSettings_3b6g1")
+
+[node name="text3" type="Label" parent="Control"]
+offset_left = 426.0
+offset_top = 574.0
+offset_right = 1013.0
+offset_bottom = 687.0
+scale = Vector2(0.668266, 0.651272)
+text = "page 2/3"
+label_settings = SubResource("LabelSettings_3b6g1")
+
+[node name="uhh" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 481.0
+offset_top = 550.0
+offset_right = 521.0
+offset_bottom = 590.0
+
+[node name="Button" type="Button" parent="uhh"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = -14.0
+offset_right = 105.0
+offset_bottom = -6.0
+scale = Vector2(32.1613, 19.651)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ciutj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_238qe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2dnpe")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cos8x")
+
+[node name="Button2" type="Button" parent="uhh"]
+layout_mode = 0
+offset_top = 136.0
+offset_right = 8.0
+offset_bottom = 144.0
+rotation = 3.13216
+scale = Vector2(32.1613, 19.651)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ciutj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_238qe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2dnpe")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cos8x")
+
+[connection signal="pressed" from="uhh/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="uhh/Button2" to="." method="_on_button_2_pressed"]

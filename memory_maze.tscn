@@ -1,0 +1,257 @@
+[gd_scene load_steps=17 format=3 uid="uid://6pu5qkgli6qy"]
+
+[ext_resource type="Script" uid="uid://p2akphkmtq8i" path="res://memory_maze_game.gd" id="1_53v6s"]
+[ext_resource type="FontFile" uid="uid://bi11k82rso0ob" path="res://PixelAE-Bold.ttf" id="2_p12fo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p12fo"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53v6s"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3724"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hs62"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ag57"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aefgn"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xglkq"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgyq7"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2utis"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oob3x"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfij3"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_cqdcb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1048, -427)]
+}
+
+[sub_resource type="Animation" id="Animation_uunhm"]
+resource_name = "next_scene"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1048, -427), Vector2(-1409.0002, 414.00006)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y1i0m"]
+_data = {
+&"RESET": SubResource("Animation_cqdcb"),
+&"next_scene": SubResource("Animation_uunhm")
+}
+
+[node name="MemoryMaze" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_53v6s")
+max_levels = 5
+
+[node name="BackgrounfPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -806.0
+offset_top = -395.0
+offset_right = -766.0
+offset_bottom = -355.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(35, 35)
+theme_override_styles/panel = SubResource("StyleBoxFlat_p12fo")
+
+[node name="TitleLabel" type="Label" parent="BackgrounfPanel"]
+layout_mode = 0
+offset_left = 17.942856
+offset_top = 1.9428573
+offset_right = 1816.9429
+offset_bottom = 609.9429
+scale = Vector2(0.018, 0.018)
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 146
+text = "Memory"
+
+[node name="MainLayout" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 350.0
+offset_right = 1473.0
+offset_bottom = 998.0
+scale = Vector2(0.68, 0.68)
+
+[node name="ButtonGrid" type="GridContainer" parent="MainLayout"]
+layout_mode = 2
+columns = 9
+
+[node name="Button1" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_53v6s")
+text = "a "
+
+[node name="Button2" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_p3724")
+text = "b "
+
+[node name="Button3" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_5hs62")
+text = "c "
+
+[node name="Button4" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_4ag57")
+text = "d "
+
+[node name="Button5" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_aefgn")
+text = "e "
+
+[node name="Button6" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_xglkq")
+text = "f "
+
+[node name="Button7" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_bgyq7")
+text = "g "
+
+[node name="Button8" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_2utis")
+text = "h "
+
+[node name="Button9" type="Button" parent="MainLayout/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 186
+theme_override_styles/normal = SubResource("StyleBoxFlat_oob3x")
+text = "i "
+
+[node name="PatternTimer" type="Timer" parent="."]
+
+[node name="InputTimer" type="Timer" parent="."]
+
+[node name="MessageLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = 121.0
+offset_right = 1179.0
+offset_bottom = 307.0
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 76
+text = "watch the pattern"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InfoLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 74.0
+offset_right = 1378.0
+offset_bottom = 260.0
+scale = Vector2(0.704, 0.704)
+theme_override_fonts/font = ExtResource("2_p12fo")
+theme_override_font_sizes/font_size = 100
+text = "level 1"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 472.0
+offset_top = -751.0
+offset_right = 512.0
+offset_bottom = -710.99994
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.34906584
+scale = Vector2(100, 100)
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfij3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_y1i0m")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

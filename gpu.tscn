@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg2g2kah64oho"]
+
+[ext_resource type="Texture2D" uid="uid://dgymc3i3afv3e" path="res://0_V1vK5U7NVT94rdl3sPTKgf_1758265873697_na1fn_L2hvbWUvdWJ1bnR1L3JhbV9jaGlwX3BpeGVsX2FydA-removebg-preview.png" id="1_6s3po"]
+
+[node name="GPU" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(236, 227)
+texture = ExtResource("1_6s3po")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

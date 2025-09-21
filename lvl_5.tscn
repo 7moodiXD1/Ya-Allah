@@ -1,0 +1,391 @@
+[gd_scene load_steps=31 format=3 uid="uid://c76qkj41m4nro"]
+
+[ext_resource type="Script" uid="uid://bhnupl433fox7" path="res://lvl_5.gd" id="1_80jhk"]
+[ext_resource type="FontFile" uid="uid://bi11k82rso0ob" path="res://PixelAE-Bold.ttf" id="1_871ml"]
+[ext_resource type="Texture2D" uid="uid://d2rdq3i5i8l6p" path="res://black_to_normal_indigo_pixel_background (1).webp" id="1_l7w87"]
+[ext_resource type="Texture2D" uid="uid://d085e3oabxsre" path="res://FreeButtons.png/FreeButtons.png" id="2_yfixo"]
+[ext_resource type="Script" uid="uid://dhtvj3j1c7qsk" path="res://rick_roll.gd" id="4_43e0g"]
+[ext_resource type="Texture2D" uid="uid://c7j4tf0ppiy6t" path="res://1758153737829.png" id="4_871ml"]
+[ext_resource type="PackedScene" uid="uid://dokrcnme4bjt8" path="res://mouse.tscn" id="6_80jhk"]
+[ext_resource type="Script" uid="uid://dnwfp5yehkcd7" path="res://player_with_joystick4.gd" id="7_80jhk"]
+[ext_resource type="Texture2D" uid="uid://fhq4iwbkln32" path="res://icon.svg" id="9_43e0g"]
+[ext_resource type="Script" uid="uid://cc1deonpn8330" path="res://press.gd" id="9_qxytp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_871ml"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mv8lu"]
+texture = ExtResource("2_yfixo")
+region_rect = Rect2(32.993, 1.066, 14.06, 13.916)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_43e0g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_80jhk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f1x0v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ynq33"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxytp"]
+size = Vector2(162, 101)
+
+[sub_resource type="Animation" id="Animation_3p4g5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_yfixo"]
+resource_name = "new_animation"
+length = 7.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0666667, 2, 3, 4, 5, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, false, true, false, true, false, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_33ycm"]
+_data = {
+&"RESET": SubResource("Animation_3p4g5"),
+&"new_animation": SubResource("Animation_yfixo")
+}
+
+[sub_resource type="Animation" id="Animation_x5jaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bubble/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Congratulations "]
+}
+
+[sub_resource type="Animation" id="Animation_c4ygw"]
+resource_name = "poping up"
+length = 9.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1000), Vector2(0, -1000), Vector2(0, -1000), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bubble/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.81, 2, 2.5, 3, 3.5, 4.5, 5, 5.5, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["", "Congratulations ", "Congratulations ", "You", "You Fixed", "You Fixed It", "You Fixed It!", "You Fixed It!", "Go", "Go Press", "Go Press It!"]
+}
+
+[sub_resource type="Animation" id="Animation_s483x"]
+resource_name = "text2"
+length = 5.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bdw6r"]
+_data = {
+&"RESET": SubResource("Animation_x5jaa"),
+&"poping up": SubResource("Animation_c4ygw"),
+&"text2": SubResource("Animation_s483x")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80jhk"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_ynq33"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_f1x0v"]
+resource_name = "new_animation"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxytp"]
+_data = {
+&"RESET": SubResource("Animation_ynq33"),
+&"new_animation": SubResource("Animation_f1x0v")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80jhk"]
+size = Vector2(104, 734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1x0v"]
+size = Vector2(104, 1174)
+
+[node name="lvl_5" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_80jhk")
+
+[node name="MainMenuBackgroundPixelNoText" type="Sprite2D" parent="."]
+position = Vector2(594, 346)
+scale = Vector2(1.02895, 0.898419)
+texture = ExtResource("1_l7w87")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -43.0
+offset_right = -25.55
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(60, 40)
+theme_override_styles/panel = SubResource("StyleBoxFlat_871ml")
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 53.0
+offset_top = 129.00002
+offset_right = 93.0
+offset_bottom = 169.00002
+scale = Vector2(0.82, 0.82)
+
+[node name="Button" type="Button" parent="Control" groups=["click"]]
+layout_mode = 0
+offset_left = 546.3415
+offset_top = 141.46338
+offset_right = 705.34125
+offset_bottom = 240.46338
+scale = Vector2(1.5, 1.3)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_fonts/font = ExtResource("1_871ml")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_mv8lu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_43e0g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_80jhk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f1x0v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ynq33")
+button_mask = 0
+text = "START"
+script = ExtResource("4_43e0g")
+
+[node name="Area2D" type="Area2D" parent="Control/Button" groups=["click"]]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Button/Area2D" groups=["click"]]
+position = Vector2(78, 50.5)
+shape = SubResource("RectangleShape2D_qxytp")
+
+[node name="Timer" type="Timer" parent="Control"]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+&"": SubResource("AnimationLibrary_33ycm")
+}
+autoplay = "new_animation"
+
+[node name="Control2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 617.0
+offset_top = 1133.0
+offset_right = 657.0
+offset_bottom = 1173.0
+scale = Vector2(0.6, 0.6)
+
+[node name="buble chat" type="Control" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bubble" type="Sprite2D" parent="Control2/buble chat"]
+texture = ExtResource("4_871ml")
+
+[node name="text" type="Label" parent="Control2/buble chat/bubble"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -778.3333
+offset_top = -358.8333
+offset_right = -31.333313
+offset_bottom = -62.833313
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_871ml")
+theme_override_font_sizes/font_size = 90
+text = "Congratulations "
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control2/buble chat"]
+libraries = {
+&"": SubResource("AnimationLibrary_bdw6r")
+}
+
+[node name="mouse" parent="." instance=ExtResource("6_80jhk")]
+position = Vector2(982, 516)
+script = ExtResource("7_80jhk")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -56.0
+offset_top = -44.0
+offset_right = 1227.0
+offset_bottom = 796.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_80jhk")
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qxytp")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(-48, 317)
+shape = SubResource("RectangleShape2D_80jhk")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(1203, 303)
+shape = SubResource("RectangleShape2D_80jhk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(577, 694)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_f1x0v")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(591, -43)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_f1x0v")
+
+[node name="press" type="TouchScreenButton" parent="."]
+position = Vector2(906.2, 500.6)
+scale = Vector2(0.6, 0.6)
+action = "click"
+script = ExtResource("9_qxytp")
+
+[node name="Node2D2" type="Node2D" parent="."]
+visible = false
+position = Vector2(119, 403)
+scale = Vector2(0.503, 0.503)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Node2D2"]
+texture_normal = ExtResource("9_43e0g")
+action = "W"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Node2D2"]
+position = Vector2(-11, 141)
+texture_normal = ExtResource("9_43e0g")
+action = "S"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Node2D2"]
+position = Vector2(166, 92)
+texture_normal = ExtResource("9_43e0g")
+action = "D"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="Node2D2"]
+position = Vector2(-170, 91)
+texture_normal = ExtResource("9_43e0g")
+action = "A"
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="Node2D2"]
+position = Vector2(1803.1809, 101.39163)
+texture_normal = ExtResource("9_43e0g")
+action = "click"
+
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
+[connection signal="timeout" from="Control/Timer" to="Control/Button" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Control/AnimationPlayer" to="Control/Button" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Control2/buble chat/AnimationPlayer2" to="Control/Button" method="_on_animation_player_2_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer3" to="Control/Button" method="_on_animation_player_3_animation_finished"]
+[connection signal="pressed" from="press" to="press" method="_on_pressed"]

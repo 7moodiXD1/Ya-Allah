@@ -1,0 +1,10 @@
+[gd_scene load_steps=0 format=3 uid="uid://1lc2rh7wda0r"]
+
+[node name="GameScene" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 376.0
+offset_top = 278.0
+offset_right = 735.0
+offset_bottom = 301.0
+text = "yo wsp nigger uh i mean wsp raw to the scene "
